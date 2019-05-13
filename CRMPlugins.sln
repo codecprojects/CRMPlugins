@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateTaskNewAccountContact
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateTaskContact", "CreateTaskContact\CreateTaskContact.csproj", "{14EDCE9A-E992-45E7-AB55-3652351B2856}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateContactAddresses", "UpdateContactAddresses\UpdateContactAddresses.csproj", "{D11D7050-8810-4B45-A02F-BA75527BABEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{14EDCE9A-E992-45E7-AB55-3652351B2856}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14EDCE9A-E992-45E7-AB55-3652351B2856}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14EDCE9A-E992-45E7-AB55-3652351B2856}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D11D7050-8810-4B45-A02F-BA75527BABEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D11D7050-8810-4B45-A02F-BA75527BABEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D11D7050-8810-4B45-A02F-BA75527BABEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D11D7050-8810-4B45-A02F-BA75527BABEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
