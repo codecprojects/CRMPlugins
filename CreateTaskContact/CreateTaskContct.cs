@@ -42,7 +42,7 @@ namespace BasicPlugin
 
                     contactCreate["subject"] = "Send e-mail to update password in 6 months.";
                     contactCreate["description"] =
-                        "Follow up and ensure all password has been updated.";
+                        "Follow up and ensure password has been updated.";
                     contactCreate["scheduledstart"] = DateTime.Now.AddMonths(6);
                     contactCreate["scheduledend"] = DateTime.Now.AddMonths(6);
                     contactCreate["category"] = context.PrimaryEntityName;
