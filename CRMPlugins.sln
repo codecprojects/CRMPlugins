@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateContactTask", "CreateContactTask\CreateContactTask.csproj", "{019C2F65-4790-4CDD-8097-CE59AB289D31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateTaskNewAccountContact", "CreateContactTask\CreateTaskNewAccountContact.csproj", "{019C2F65-4790-4CDD-8097-CE59AB289D31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
