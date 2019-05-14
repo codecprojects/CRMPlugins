@@ -9,11 +9,11 @@ using Microsoft.Xrm.Sdk.Query;
 
 namespace UpdateContactAddresses
 {
-    public class UpdateContactAddressses
+    public class UpdateContactAddressses : IPlugin
     {
         public void Execute(IServiceProvider serviceProvider)
         {
-            // Create a tracing instance to log progress of this plugin.
+            // Create a tracing instance to log progress of this plugin.6
             ITracingService tracing = (ITracingService)serviceProvider.GetService(typeof(ITracingService));
 
             try
@@ -25,12 +25,12 @@ namespace UpdateContactAddresses
                 IOrganizationServiceFactory factory = (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
                 IOrganizationService service = factory.CreateOrganizationService(null);
 
-                if (pluginExecutionContext.InputParameters.Contains("Target") && pluginExecutionContext.InputParameters["Target"] is Entity)
+                if (pluginExecutionContext.InputParameters.Contains("Target") && pluginExecutionContext.InputParameters["Target"] is Entity) // Checking that it contains 'Target' and that it is an entity
                 {
                     // Obtain the target entity from the input parameters.
                     Entity account = (pluginExecutionContext.InputParameters["Target"] as Entity);
 
-                    // Verify that the target entity represents an account. If not, this plug-in was not registered correctly.
+                    // Verify that the target entity represents an account. 
                     if (account.LogicalName != "account")
                     {
                         tracing.Trace("This entity is not an Account entity. It is likely that this plug-in was not registered correctly (was an incorrect \"Primary Entity\" selected? It should be an Account entity).");
