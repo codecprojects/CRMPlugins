@@ -45,7 +45,7 @@ namespace UpdateContactAddresses
 
                     foreach (Entity contact in result.Entities)
                     {
-                        tracing.Trace("Updating contact " + contact.ToString() + " address...");
+                        tracing.Trace("Updating contact addresses " + contact.ToString() + " address...");
                         contact["address1_line1"] = account.GetAttributeValue<string>("address1_line1");
                         contact["address1_line2"] = account.GetAttributeValue<string>("address1_line2");
                         contact["address1_line3"] = account.GetAttributeValue<string>("address1_line3");
