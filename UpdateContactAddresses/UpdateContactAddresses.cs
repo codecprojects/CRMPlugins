@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.ServiceModel;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Query;
@@ -13,7 +9,7 @@ namespace UpdateContactAddresses
     {
         public void Execute(IServiceProvider serviceProvider)
         {
-            // Create a tracing instance to log progress of this plugin.6
+            // Create a tracing instance to log progress of this plugin.
             ITracingService tracing = (ITracingService)serviceProvider.GetService(typeof(ITracingService));
 
             try
@@ -36,7 +32,6 @@ namespace UpdateContactAddresses
                         tracing.Trace("This entity is not an Account entity. It is likely that this plug-in was not registered correctly (was an incorrect \"Primary Entity\" selected? It should be an Account entity).");
                         return;
                     }
-
                     var query = new QueryExpression("contact"); // Getting contacts
                     query.Criteria.AddCondition("accountid", ConditionOperator.Equal, pluginExecutionContext.PrimaryEntityId); // Ensure contact is related to account
 
@@ -57,7 +52,6 @@ namespace UpdateContactAddresses
                         tracing.Trace("Contact " + contact.ToString() + " address updated.");
                     }
                 }
-
                 tracing.Trace("Completed execution of plugin " + this.GetType().Name + ".");
             }
             catch (FaultException<OrganizationServiceFault> ex)
@@ -70,7 +64,6 @@ namespace UpdateContactAddresses
                 tracing.Trace("\t\tError: " + ex.Message);
                 throw ex;
             }
-
         }
     }
 }
